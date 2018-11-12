@@ -8,7 +8,8 @@ function wrapper() {
   };
 
   const loopThrough = () => {
-
+  	let thisButtonText = this.childNodes[0].nodeValue;
+  	let thisButtonLength = thisButtonText.length;
 
     for (let i = 0; i < thisButtonLength; i++) {
     	changeColor();
@@ -19,5 +20,5 @@ function wrapper() {
 };
 
 for(let i = 0; i < navButtons.length; i++) {
-
+	navButtons[i].addEventListener('click', wrapper);
 };
